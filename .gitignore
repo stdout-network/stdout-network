@@ -1,0 +1,16 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+
+# Local seller state
+*.db
+*.db-*
+
+# Secrets and editor clutter
+.env
+.DS_Store
+.idea/
+.vscode/

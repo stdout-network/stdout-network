@@ -1,0 +1,42 @@
+# Each path is owned by a commune (see COMMUNES.md). Org: github.com/stdout-network. If that ever changes, replace "stdout-network" below.
+# One approving review from the owning commune is required to merge.
+
+/seller/                       @stdout-network/seller
+/tests/test_conformance.py     @stdout-network/seller
+/adterm/                       @stdout-network/terminal
+/tests/test_adterm.py          @stdout-network/terminal
+/treasury/                     @stdout-network/treasury
+/payouts/                      @stdout-network/treasury
+/policy/                       @stdout-network/commons
+/commons/                      @stdout-network/commons
+/scripts/                      @stdout-network/agents
+/statusline/                   @stdout-network/agents
+/connectors/                   @stdout-network/agents
+/market/                       @stdout-network/market
+/README.md                     @stdout-network/voice
+/docs/                         @stdout-network/voice
+/brand/                        @stdout-network/voice
+
+# Governance belongs to the Confederal Council
+/CHARTER.md                    @stdout-network/council
+/SOCIAL_CONTRACT.md            @stdout-network/council
+/GOVERNANCE.md                 @stdout-network/council
+/COMMUNES.md                   @stdout-network/council
+/CODE_OF_CONDUCT.md            @stdout-network/council
+/CONTRIBUTING.md               @stdout-network/council
+/FOUNDING_ASSEMBLY.md          @stdout-network/council
+/LICENSING.md                  @stdout-network/council
+/LICENSE                       @stdout-network/council
+/rfcs/                         @stdout-network/council
+/decisions/                    @stdout-network/council
+# MEMBERS.md has no owner on purpose: any commune can welcome a new member.
+/.github/                      @stdout-network/council
+
+# Each commune owns its own notes
+/communes/seller/              @stdout-network/seller
+/communes/terminal/            @stdout-network/terminal
+/communes/treasury/            @stdout-network/treasury
+/communes/commons/             @stdout-network/commons
+/communes/agents/              @stdout-network/agents
+/communes/market/              @stdout-network/market
+/communes/voice/               @stdout-network/voice
