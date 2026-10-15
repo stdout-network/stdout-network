@@ -1,0 +1,26 @@
+[project]
+name = "stdout-network"
+version = "0.1.0"
+description = "stdout Network: an AdCP 3.2 seller agent for terminal advertising, plus the opt-in adterm wrapper"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+dependencies = ["fastmcp>=4.1", "starlette>=1.0", "uvicorn>=0.30"]
+
+[project.optional-dependencies]
+dev = ["adcp>=8.1", "pytest>=8"]
+
+[project.scripts]
+stdout-seller = "seller.server:main"
+adterm = "adterm.adterm:_entry"
+
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["seller", "adterm"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+

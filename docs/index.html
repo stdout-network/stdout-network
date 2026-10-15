@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>stdout Network</title>
+<meta name="description" content="A member-run ad network for the terminal. Developers opt in, keep most of what their screen earns, and nothing about their code leaves their machine.">
+<style>
+:root{--bg:#fbfaf7;--fg:#1b1b1a;--muted:#5f5e5a;--line:#d9d6ce;--panel:#f1efe9;--accent:#0b7a55;--accent-soft:#dff1e8;--warm:#b5532a;--term-bg:#16181d;--term-fg:#e6e6e3;--term-dim:#8b8f98}
+@media (prefers-color-scheme: dark){:root{--bg:#121311;--fg:#ecebe6;--muted:#a3a29b;--line:#34352f;--panel:#1c1d1a;--accent:#4fc597;--accent-soft:#183a2c;--warm:#e0875e;--term-bg:#0b0c0e}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:46rem;margin:0 auto;padding:0 16px 4rem}
+header{padding:3.5rem 0 1rem}
+.kicker{font:600 .8rem/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin:0}
+h1{font-size:clamp(2rem,7vw,3rem);line-height:1.1;margin:.6rem 0 1rem;letter-spacing:-.02em}
+h2{font-size:1.5rem;line-height:1.25;margin:3.5rem 0 .75rem;letter-spacing:-.01em}
+.lede{font-size:1.15rem;color:var(--muted);margin:0}
+a{color:var(--accent)}
+.cta{display:flex;flex-wrap:wrap;gap:.75rem 1rem;align-items:center;margin:1.5rem 0 0}
+.btn{display:inline-block;background:var(--accent);color:var(--bg);padding:.65rem 1.2rem;border-radius:6px;text-decoration:none;font-weight:600}
+.cta span{color:var(--muted);font-size:.95rem}
+.term{background:var(--term-bg);color:var(--term-fg);border-radius:8px;padding:1rem 1.1rem;font:14px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere;margin:2rem 0 .4rem}
+.term .dim{color:var(--term-dim)}
+.term .tag{background:#2b5c47;color:#d7f5e6;padding:0 .35em;border-radius:3px}
+.caption{font-size:.85rem;color:var(--muted);margin:0}
+.scroll{overflow-x:auto}
+.scroll svg{min-width:560px}
+table{border-collapse:collapse;width:100%;font-size:.95rem}
+th,td{text-align:left;padding:.45rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:600;color:var(--muted);font-size:.85rem}
+code{font:.9em ui-monospace,SFMono-Regular,Menlo,monospace}
+ul.points{padding-left:1.1rem}
+ul.points li{margin:.4rem 0}
+figure{margin:1.75rem 0}
+figcaption{font-size:.85rem;color:var(--muted);margin-top:.5rem}
+svg{width:100%;height:auto;display:block}
+svg text{fill:var(--fg);font:13px system-ui,-apple-system,sans-serif}
+svg .sm{font-size:11px;fill:var(--muted)}
+svg .b{font-weight:600}
+svg .bx{fill:var(--panel);stroke:var(--line)}
+svg .ac{fill:var(--accent-soft);stroke:var(--accent)}
+svg .wm{fill:var(--warm)}
+svg .ln{stroke:var(--fg);stroke-width:1.2;fill:none}
+svg .life{stroke:var(--muted);stroke-dasharray:4 4;fill:none}
+svg .zone{fill:var(--accent-soft);opacity:.5}
+svg .ah{fill:var(--fg)}
+.note{border-left:3px solid var(--warm);padding:.1rem 0 .1rem .9rem;color:var(--muted)}
+footer{border-top:1px solid var(--line);margin-top:4rem;padding-top:1.25rem;font-size:.9rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<main>
+
+<header>
+<p class="kicker">stdout Network</p>
+<h1>Ads for the moments developers wait.</h1>
+<p class="lede">A member-run ad network for the terminal. Developers opt in, keep most of what their screen earns, and nothing about their code leaves their machine. The network belongs to the people who build it: one member, one vote.</p>
+<div class="cta"><a class="btn" href="https://github.com/stdout-network/stdout-network">Have a look on GitHub</a><span>An early idea, kept deliberately basic. Play with it, comment, contribute or ignore it.</span></div>
+</header>
+
+<pre class="term"><span class="dim">$</span> adterm npm install
+<span class="tag">sponsored</span> Cachely: node_modules is 1.2GB again. Cache it once, restore it in 3s.  Try free -&gt; <span class="dim">stdout.example/c/Cap7pIdYCo5a</span>
+
+up to date in 739ms</pre>
+<p class="caption">What a developer sees. Cachely is the demo advertiser; the command runs exactly as typed, and the ad goes to stderr so piped output stays clean.</p>
+
+<h2>The audience nobody else reaches</h2>
+<p>Developers spend their day in the terminal, where browser ad blockers don't reach and no ad network has ever been invited. stdout shows one short line at five terminal moments when someone is waiting or has just won, plus one in the status bar of their coding agent, and only to people who opted in.</p>
+<div class="scroll"><table>
+<tr><th>Moment</th><th>When it shows</th><th>CPM</th></tr>
+<tr><td>install</td><td><code>npm install</code>, <code>pip install</code>, <code>uv add</code>, <code>cargo add</code> and friends</td><td>£12</td></tr>
+<tr><td>build</td><td><code>docker build</code>, <code>cargo build</code>, <code>make</code>, <code>tsc</code></td><td>£18</td></tr>
+<tr><td>tests green</td><td>a test command exits 0</td><td>£28</td></tr>
+<tr><td>ship it</td><td><code>git push</code> or a deploy exits 0</td><td>£24</td></tr>
+<tr><td>failure</td><td>any command exits non-zero</td><td>£2.50</td></tr>
+<tr><td>agent status line</td><td>the status bar of Claude Code while the agent works, one impression per 10-minute rotation</td><td>£20</td></tr>
+</table></div>
+<ul class="points">
+<li><strong>Targeted by project, never by person.</strong> A buyer can ask for "UK developers whose project uses Postgres". The match happens on the developer's own machine.</li>
+<li><strong>Opt in, always.</strong> Nothing runs unless you typed <code>adterm</code>. No install scripts, in line with npm's rules since 2019.</li>
+<li><strong>Never in the chat.</strong> Inside Claude Code and other agents, ads never go into a tool result, the conversation or the model's context. That would be prompt injection with a CPM. Ads are also off in CI and non-interactive shells.</li>
+<li><strong>The status line is for people.</strong> Coding agents have a status bar that only the human sees. That's the one place stdout runs while an agent works: the developer watches the agent, and the model never reads the line.</li>
+<li><strong>Never reads the conversation.</strong> In the status line, <code>adterm</code> reads one thing from the agent: the project's folder, to match ads to its stack. It never opens the transcript, and never looks at the model, the cost or what you asked the agent to do.</li>
+<li><strong>Say what you want to see.</strong> <code>adterm --interests add postgres</code> tells it what you'd like ads about. Interests stay on your machine and are matched there, like everything else.</li>
+<li><strong>Text only, sanitised.</strong> No escape sequences, no clipboard writes, no "curl | sh" copy.</li>
+</ul>
+
+<h2>Privacy by design</h2>
+<p>The ad request carries two things: the moment and the tool name. No IDs, paths, package names or project names. The seller sends back a short slate of eligible ads with their targeting rules, and <code>adterm</code> decides locally which one fits.</p>
+<figure>
+<div class="scroll"><svg viewBox="0 0 640 330" role="img" aria-labelledby="d1t d1d">
+<title id="d1t">How an ad is matched on the developer's machine</title>
+<desc id="d1d">adterm sends only the moment and tool name to the seller. The seller returns up to 12 ads with stack rules. adterm reads project manifests locally, keeps the ads whose rules match, picks one, and sends a render beacon for that ad only, which is the only thing billed.</desc>
+<defs><marker id="m1" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="ah" d="M0 0L8 4L0 8z"/></marker></defs>
+<rect class="zone" x="8" y="8" width="404" height="314" rx="10"/>
+<text class="sm" x="20" y="27">Your machine: manifests never leave it</text>
+<rect class="bx" x="20" y="40" width="140" height="36" rx="6"/><text x="90" y="63" text-anchor="middle">Project manifests</text>
+<rect class="ac" x="230" y="40" width="140" height="36" rx="6"/><text class="b" x="300" y="63" text-anchor="middle">adterm</text>
+<rect class="bx" x="470" y="40" width="140" height="36" rx="6"/><text x="540" y="63" text-anchor="middle">stdout seller</text>
+<path class="life" d="M90 76V310M300 76V310M540 76V310"/>
+<path class="ln" d="M300 110H536" marker-end="url(#m1)"/><text x="476" y="89" text-anchor="middle">1. moment +</text><text x="476" y="102" text-anchor="middle">tool name</text>
+<path class="ln" d="M540 150H304" marker-end="url(#m1)"/><text x="476" y="129" text-anchor="middle">2. up to 12 ads</text><text x="476" y="142" text-anchor="middle">+ stack rules</text>
+<path class="ln" d="M300 190H94" marker-end="url(#m1)"/><text x="195" y="182" text-anchor="middle">3. read manifests locally</text>
+<rect class="ac" x="226" y="214" width="148" height="32" rx="6"/><text x="300" y="235" text-anchor="middle">4. match, pick one</text>
+<path class="ln" d="M300 280H536" marker-end="url(#m1)"/><text x="476" y="259" text-anchor="middle">5. rendered:</text><text x="476" y="272" text-anchor="middle">bill this one</text>
+</svg></div>
+<figcaption>The seller learns which ad rendered, which is no more than any targeted buy reveals. It never sees the dependency list, file names or paths.</figcaption>
+</figure>
+
+<h2>Built for agents</h2>
+<p>Advertisers' AI agents buy stdout inventory over <strong>AdCP 3.2</strong>, the open Ad Context Protocol: discover products, create a media buy, upload creatives, read delivery. Each moment is its own product, so a buyer can target the agent status line (<code>tty_agent_statusline</code>) on its own, or alongside terminal moments, with the same country and stack targeting. Every request and response is validated against the official AdCP 3.2.3 schemas.</p>
+<figure>
+<div class="scroll"><svg viewBox="0 0 640 250" role="img" aria-labelledby="d2t d2d">
+<title id="d2t">System architecture</title>
+<desc id="d2d">A buyer agent talks to the stdout seller agent over MCP using AdCP tasks. The seller stores state in SQLite. The adterm wrapper on the developer's machine talks to the seller over plain HTTP to fetch a slate, confirm a render and redirect clicks. Ads never enter Claude Code's chat or tool results; in Claude Code they appear only in the status line. Ads are off in CI and non-interactive shells.</desc>
+<defs><marker id="m2" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="ah" d="M0 0L8 4L0 8z"/></marker></defs>
+<rect class="bx" x="20" y="40" width="150" height="60" rx="8"/><text class="b" x="95" y="66" text-anchor="middle">Buyer agent</text><text class="sm" x="95" y="84" text-anchor="middle">the advertiser's AI</text>
+<rect class="ac" x="245" y="40" width="150" height="60" rx="8"/><text class="b" x="320" y="66" text-anchor="middle">Seller agent</text><text class="sm" x="320" y="84" text-anchor="middle">AdCP 3.2 over MCP</text>
+<rect class="bx" x="470" y="40" width="150" height="60" rx="8"/><text class="b" x="545" y="66" text-anchor="middle">adterm</text><text class="sm" x="545" y="84" text-anchor="middle">developer's terminal</text>
+<path class="ln" d="M174 70H241" marker-start="url(#m2)" marker-end="url(#m2)"/><text class="sm" x="207" y="62" text-anchor="middle">MCP</text>
+<path class="ln" d="M399 70H466" marker-start="url(#m2)" marker-end="url(#m2)"/><text class="sm" x="432" y="62" text-anchor="middle">HTTP</text>
+<path class="ln" d="M320 100V146" marker-end="url(#m2)"/>
+<rect class="bx" x="270" y="150" width="100" height="40" rx="6"/><text x="320" y="175" text-anchor="middle">SQLite</text>
+<text class="sm" x="20" y="122">get_products, create_media_buy,</text>
+<text class="sm" x="20" y="137">sync_creatives, get_media_buy_delivery</text>
+<text class="sm" x="470" y="122">/serve, /imp, /c</text>
+<text class="sm" x="470" y="137">350 ms budget, stderr only</text>
+<rect class="bx" x="470" y="160" width="150" height="62" rx="6" stroke-dasharray="4 4"/>
+<text class="sm" x="545" y="183" text-anchor="middle">Agents: status line only,</text><text class="sm" x="545" y="198" text-anchor="middle">never chat. Off in CI,</text><text class="sm" x="545" y="213" text-anchor="middle">non-interactive shells</text>
+</svg></div>
+<figcaption>Only a rendered ad bills, confirmed by <code>adterm</code>. A slow or unreachable seller means no ad, never a slower command.</figcaption>
+</figure>
+
+<h2>Where the money goes</h2>
+<p class="note">A starting proposal, nothing more. Up for discussion.</p>
+<figure>
+<div class="scroll"><svg viewBox="0 0 640 230" role="img" aria-labelledby="d3t d3d">
+<title id="d3t">Revenue split</title>
+<desc id="d3d">Of every 100 pounds of rendered ad spend, 70 go to the developer, who can redirect it to an open source project or a charity, and 30 run the network. After costs, 10 percent of profit goes to a fighting fund for members who lose their jobs and the rest is split between beer and marketing. Separately, 20 percent of impressions run free for verified charities.</desc>
+<text class="sm" x="20" y="20">£100 of advertiser spend on rendered ads</text>
+<rect class="ac" x="20" y="30" width="420" height="44" rx="4"/><text class="b" x="32" y="57">£70 to the developer (or their OSS project or charity)</text>
+<rect class="bx" x="440" y="30" width="180" height="44" rx="4"/><text class="b" x="452" y="57">£30 network</text>
+<path class="ln" d="M440 80V92H620V80M530 92V110"/>
+<rect class="wm" x="440" y="115" width="18" height="34"/><rect class="bx" x="458" y="115" width="81" height="34"/><rect class="bx" x="539" y="115" width="81" height="34"/>
+<text class="sm" x="449" y="110" text-anchor="middle">10%</text><text class="sm" x="498" y="136" text-anchor="middle">beer</text><text class="sm" x="580" y="136" text-anchor="middle">marketing</text>
+<text class="sm" x="430" y="136" text-anchor="end">costs first, then any profit:</text>
+<text class="sm" x="20" y="172">Of profit: 10% (orange) to the fighting fund for members who lose their jobs,</text>
+<text class="sm" x="20" y="188">the rest split between beer and marketing (proposed: half each).</text>
+<text x="20" y="218">Separately, 20% of impressions run free for verified charities.</text>
+</svg></div>
+<figcaption>Nobody expects to get rich. The beer pot is spent on gatherings, preferably near a pub.</figcaption>
+</figure>
+
+<h2>Who runs it</h2>
+<p class="note">One rough idea for how it could be run, written up in <a href="https://github.com/stdout-network/stdout-network/tree/main/ideas">ideas/</a>. Nothing is decided.</p>
+<p>The thought: start with a group of people from ad tech, then open to developers and anyone else who fancies a slightly whacky experiment in confederalism. Power sits in small, self-governing communes and rises through delegates who can be recalled.</p>
+<ul class="points">
+<li><strong>One member, one vote.</strong> Employers, sponsors and advertisers get a voice, never a vote.</li>
+<li><strong>Co-chairs, not bosses.</strong> Every commune has two, on staggered six-month terms.</li>
+<li><strong>Guarded against capture.</strong> No more than a third of Council delegates may share an employer.</li>
+<li><strong>Decided in the open.</strong> Every decision goes in a public log; if it is not in the log, it was not decided.</li>
+</ul>
+<figure>
+<div class="scroll"><svg viewBox="0 0 640 280" role="img" aria-labelledby="d4t d4d">
+<title id="d4t">How stdout Network governs itself</title>
+<desc id="d4d">The General Assembly of all members sits at the top and elects the Peace and Consensus Committee. Below it is the Confederal Council, made of two co-chairs from each commune. Seven communes, Seller, Terminal, Treasury, Commons, Agents, Market and Voice, send recallable delegates to the Council and carry its decisions back.</desc>
+<defs><marker id="m4" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="ah" d="M0 0L8 4L0 8z"/></marker></defs>
+<rect class="ac" x="170" y="15" width="300" height="50" rx="8"/><text class="b" x="320" y="37" text-anchor="middle">General Assembly</text><text class="sm" x="320" y="54" text-anchor="middle">all members, quarterly, one member one vote</text>
+<rect class="bx" x="490" y="15" width="140" height="50" rx="8"/><text x="560" y="37" text-anchor="middle">Peace and Consensus</text><text class="sm" x="560" y="54" text-anchor="middle">3 to 5 elected</text>
+<path class="ln" d="M470 40H486" marker-end="url(#m4)"/>
+<path class="ln" d="M320 65V106" marker-end="url(#m4)"/>
+<rect class="bx" x="170" y="110" width="300" height="50" rx="8"/><text class="b" x="320" y="132" text-anchor="middle">Confederal Council</text><text class="sm" x="320" y="149" text-anchor="middle">2 co-chairs from each commune</text>
+<text class="sm" x="20" y="194">delegates,</text><text class="sm" x="20" y="208">recallable</text>
+<path class="ln" d="M56 221L191 164" marker-start="url(#m4)" marker-end="url(#m4)"/>
+<path class="ln" d="M144 221L234 164" marker-start="url(#m4)" marker-end="url(#m4)"/>
+<path class="ln" d="M232 221L277 164" marker-start="url(#m4)" marker-end="url(#m4)"/>
+<path class="ln" d="M320 221V164" marker-start="url(#m4)" marker-end="url(#m4)"/>
+<path class="ln" d="M408 221L363 164" marker-start="url(#m4)" marker-end="url(#m4)"/>
+<path class="ln" d="M496 221L406 164" marker-start="url(#m4)" marker-end="url(#m4)"/>
+<path class="ln" d="M584 221L449 164" marker-start="url(#m4)" marker-end="url(#m4)"/>
+<rect class="bx" x="16" y="225" width="80" height="40" rx="6"/><text x="56" y="250" text-anchor="middle">Seller</text>
+<rect class="bx" x="104" y="225" width="80" height="40" rx="6"/><text x="144" y="250" text-anchor="middle">Terminal</text>
+<rect class="bx" x="192" y="225" width="80" height="40" rx="6"/><text x="232" y="250" text-anchor="middle">Treasury</text>
+<rect class="bx" x="280" y="225" width="80" height="40" rx="6"/><text x="320" y="250" text-anchor="middle">Commons</text>
+<rect class="bx" x="368" y="225" width="80" height="40" rx="6"/><text x="408" y="250" text-anchor="middle">Agents</text>
+<rect class="bx" x="456" y="225" width="80" height="40" rx="6"/><text x="496" y="250" text-anchor="middle">Market</text>
+<rect class="bx" x="544" y="225" width="80" height="40" rx="6"/><text x="584" y="250" text-anchor="middle">Voice</text>
+</svg></div>
+<figcaption>The Council coordinates but cannot overrule a commune inside its own scope; only the Assembly can.</figcaption>
+</figure>
+
+<footer>
+<p><a href="https://github.com/stdout-network/stdout-network">Code on GitHub</a> · <a href="https://github.com/stdout-network/stdout-network/blob/main/ideas/CHARTER.md">The Charter</a> · <a href="https://github.com/stdout-network/stdout-network/issues">Say what you think</a></p>
+<p>The code is Apache-2.0 licensed.</p>
+</footer>
+
+</main>
+</body>
+</html>
